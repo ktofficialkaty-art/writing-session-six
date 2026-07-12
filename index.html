@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>雅思写作 S6 · 流程图与报告类作文</title>
+<style>
+:root{--ink:#223138;--muted:#66757d;--page:#f6f8f8;--card:#fff;--line:#d8e2e4;--primary:#315c66;--primary-dark:#203e46;--primary-soft:#e8f2f3;--accent:#d08c45;--accent-soft:#fff3e5;--green:#2f855a;--green-soft:#e8f6ef;--red:#c53030;--red-soft:#fdeaea;--shadow:0 8px 24px rgba(31,63,70,.10)}
+*{box-sizing:border-box}html,body{margin:0;padding:0}body{font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",Arial,sans-serif;background:var(--page);color:var(--ink);line-height:1.68}.eng{font-family:Georgia,"Times New Roman",serif}button,input,textarea,select{font:inherit}img{display:block;max-width:100%}
+.topbar{position:sticky;top:0;z-index:50;background:var(--primary-dark);color:#fff;box-shadow:0 6px 20px rgba(0,0,0,.16)}.top-inner{max-width:1320px;margin:0 auto;padding:13px 22px 0;display:flex;gap:16px;align-items:center;flex-wrap:wrap}.brand{font-weight:800}.badge{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.22);border-radius:7px;padding:3px 8px;margin-right:7px;font-size:12px}.title{flex:1;min-width:260px}.title h1{margin:0;font-size:20px}.title p{margin:2px 0 0;color:rgba(255,255,255,.76);font-size:12.5px}
+.tabs{max-width:1320px;margin:10px auto 0;padding:0 22px;display:flex;gap:6px;overflow-x:auto}.tabs button{border:none;background:rgba(255,255,255,.08);color:rgba(255,255,255,.86);padding:10px 16px;border-radius:9px 9px 0 0;font-weight:800;white-space:nowrap;cursor:pointer}.tabs button.active{background:var(--page);color:var(--primary-dark)}
+main{max-width:1320px;margin:0 auto;padding:22px 22px 80px}.view{display:none}.view.active{display:block}.card,.panel,.fold,.task{background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:var(--shadow)}.card,.task{padding:17px 19px;margin-bottom:16px}.card h2,.task h2{margin:0 0 10px;color:var(--primary-dark);font-size:22px}.task h3{margin:0 0 10px;color:var(--primary-dark);font-size:17px}.muted{color:var(--muted);font-size:13px}.section-title{display:flex;align-items:center;gap:9px;margin:0 0 14px;color:var(--primary-dark)}.section-title span{display:grid;place-items:center;width:29px;height:29px;border-radius:7px;background:var(--primary);color:#fff;font-weight:800}
+.split{display:grid;grid-template-columns:minmax(420px,.92fr) minmax(500px,1.08fr);gap:18px;align-items:start}.left-sticky{position:sticky;top:104px}.right-scroll{height:calc(100vh - 126px);min-height:620px;overflow:auto;padding-right:4px}.process-split .right-scroll{height:auto;min-height:0;overflow:auto}.panel{overflow:hidden}.panel-head{display:flex;justify-content:space-between;gap:10px;align-items:center;background:var(--primary-soft);padding:11px 14px;border-bottom:1px solid var(--line)}.panel-head b{color:var(--primary-dark)}.panel-body{padding:14px}.diagram{border:1px solid var(--line);border-radius:8px;overflow:hidden;background:#fff}.step-buttons{display:grid;grid-template-columns:repeat(3,1fr);gap:7px;margin-top:10px}.step-btn{border:1.5px solid var(--line);border-radius:8px;background:#fff;color:var(--primary-dark);font-weight:800;min-height:34px;cursor:pointer}.step-btn.active{background:var(--accent-soft);border-color:var(--accent);color:#8a4f15}.step-info{margin-top:10px;border:1px solid var(--line);border-left:5px solid var(--accent);border-radius:8px;padding:10px 12px;background:var(--accent-soft)}
+.fold{margin:0 0 12px;overflow:hidden}.fold summary{cursor:pointer;list-style:none;padding:11px 14px;background:var(--primary-soft);font-weight:800;color:var(--primary-dark)}.fold summary::-webkit-details-marker{display:none}.fold summary:after{content:"+";float:right}.fold[open] summary:after{content:"-"}.fold-body{padding:14px 16px}.formula{background:#fbfdfd;border:1px dashed var(--line);border-radius:8px;padding:11px 13px;margin:8px 0}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.box{border:1px solid var(--line);border-radius:8px;padding:12px;background:#fff}.box h4{margin:0 0 6px;color:var(--primary-dark)}.box p{margin:5px 0}.mini{font-size:13px;color:var(--muted)}
+.options{display:grid;gap:8px;margin-top:8px}.option{border:1.5px solid var(--line);border-radius:8px;background:#fff;padding:9px 11px;text-align:left;cursor:pointer}.option:hover{border-color:var(--primary);background:var(--primary-soft)}.option.selected{border-color:var(--primary);background:var(--primary-soft);box-shadow:inset 0 0 0 1px var(--primary)}.option.correct{border-color:var(--green);background:var(--green-soft)}.option.wrong{border-color:var(--red);background:var(--red-soft)}.feedback{min-height:20px;margin-top:8px;font-size:12.5px;font-weight:800}.good{color:var(--green)}.bad{color:var(--red)}.check-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px}.btn{border:none;border-radius:8px;padding:8px 14px;font-weight:800;cursor:pointer}.btn-primary{background:var(--primary);color:#fff}.btn-ghost{background:#fff;border:1.5px solid var(--line);color:var(--primary-dark)}
+.quiz-list{display:grid;gap:12px;margin-top:12px}.quiz-card{border:1px solid var(--line);border-radius:8px;background:#fbfdfd;padding:12px}.quiz-card h4{margin:0 0 7px;color:var(--primary-dark)}.quiz-stem{margin:0 0 8px}.blank{display:inline-block;min-width:92px;border-bottom:2px solid var(--primary);text-align:center;color:var(--primary);font-weight:800}.translation-list{display:grid;gap:10px;margin-top:10px}.translation-prompt{border:1px dashed var(--line);border-radius:8px;background:#fff;padding:10px}.translation-prompt p{margin:4px 0}.translation-hint{font-size:13px;color:var(--muted);background:var(--primary-soft);border-radius:7px;padding:5px 7px;margin:6px 0}.translation-input{width:100%;min-height:42px;border:none;border-bottom:2px solid var(--line);outline:none;resize:vertical;padding:8px 4px 5px;background:#fff;font-family:Georgia,"Times New Roman",serif;line-height:1.55}.translation-input:focus{border-bottom-color:var(--primary)}.translation-input.correct{border-bottom-color:var(--green);background:var(--green-soft)}.translation-input.wrong{border-bottom-color:var(--red);background:var(--red-soft)}.answer-line{min-height:34px;border-bottom:1.5px solid var(--line);margin-top:6px}.definition{background:var(--primary-soft);border-left:5px solid var(--primary);border-radius:8px;padding:12px 14px;margin:10px 0}.one-line{display:block;margin:7px 0}.cloze-model{font-family:Georgia,"Times New Roman",serif;background:#fff;border-left:5px solid var(--accent);padding:13px 15px;border-radius:8px;line-height:2.15}.cloze-model p{margin:0 0 14px}.cloze-model select{min-width:190px;border:1.5px solid var(--line);border-radius:7px;background:#fff;padding:4px 7px;color:var(--primary-dark)}.cloze-model select.correct{border-color:var(--green);background:var(--green-soft)}.cloze-model select.wrong{border-color:var(--red);background:var(--red-soft)}.cloze-hint{display:inline-block;margin:0 3px 0 6px;padding:1px 6px;border-radius:6px;background:var(--accent-soft);color:#8a4f15;font-family:"Microsoft YaHei","PingFang SC","Noto Sans SC",Arial,sans-serif;font-size:13px;font-weight:800}.locked-answer{position:relative}.locked-answer.locked .hl-controls,.locked-answer.locked .model,.locked-answer.locked .muted{display:none}.lock-message{border:1.5px dashed var(--line);border-radius:8px;background:var(--primary-soft);padding:16px;color:var(--primary-dark);font-weight:800}.locked-answer:not(.locked) .lock-message{display:none}
+.writer{border:1.5px solid var(--line);border-radius:9px;overflow:hidden;background:#fff;margin-top:10px}.toolbar{display:flex;gap:5px;align-items:center;flex-wrap:wrap;padding:8px 10px;background:var(--primary-soft);border-bottom:1px solid var(--line)}.toolbar button,.toolbar input{border:1px solid var(--line);background:#fff;border-radius:6px;min-width:30px;height:28px;padding:3px 8px;cursor:pointer}.toolbar input{padding:0;width:36px}.editor{min-height:145px;padding:13px 14px;outline:none;font-family:Georgia,"Times New Roman",serif;background:#fff}.editor:empty:before{content:attr(data-placeholder);color:#98a6ab}.writer-foot{display:flex;justify-content:space-between;padding:8px 10px;border-top:1px solid var(--line);color:var(--muted);font-size:12.5px;background:#fbfdfd}
+.table{width:100%;border-collapse:collapse;margin:10px 0;background:#fff}.table th,.table td{border:1px solid var(--line);padding:8px 10px;vertical-align:top}.table th{background:var(--primary-soft);color:var(--primary-dark)}.vocab-group{margin:0 0 18px}.vocab-group h3{margin:0 0 8px;color:var(--primary-dark);font-size:18px}.vocab-group .table{table-layout:fixed;margin:0}.vocab-group th{font-size:16px;text-align:center;padding:8px 10px}.vocab-group td{font-size:16px;line-height:1.65;padding:9px 11px}.vocab-group td:first-child{font-family:Georgia,"Times New Roman","Microsoft YaHei",serif;font-weight:700}.model{font-family:Georgia,"Times New Roman",serif;background:#fff;border-left:5px solid var(--green);padding:13px 15px;border-radius:8px;line-height:1.75}.cn-model{background:var(--accent-soft);border-left:5px solid var(--accent);padding:13px 15px;border-radius:8px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px}.hl-controls{display:flex;gap:7px;flex-wrap:wrap;margin:10px 0}.hl-controls span{border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-size:12.5px;font-weight:800}.hl-link,.legend-link{background:#fff2cc}.hl-passive,.legend-passive{background:#ddf4ff}.hl-verb,.legend-verb{background:#e5f7dd}.hl-detail,.legend-detail{background:#f8e1ff}.model mark{border-radius:4px;padding:0 2px;color:inherit}
+.classify-layout{display:grid;grid-template-columns:1fr;gap:12px}.chip-pool,.drop-grid{border:1px solid var(--line);border-radius:9px;background:#fff;padding:10px}.chip-pool{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:7px}.chip{display:block;border:1.5px solid var(--primary);border-radius:8px;background:#fff;color:var(--primary-dark);padding:6px 8px;margin:0;cursor:grab;font-size:12.5px;line-height:1.38}.chip.placed{opacity:.35}.drop-grid{display:grid;grid-template-columns:repeat(5,minmax(136px,1fr));gap:9px}.drop-zone{min-height:128px;border:1.5px dashed var(--line);border-radius:8px;background:#fbfdfd;padding:8px}.drop-zone h4{margin:0 0 6px;color:var(--primary-dark);font-size:13px}.zone-chip{display:block;background:var(--primary-soft);border-radius:7px;padding:5px 7px;margin:4px 0;font-size:12px;line-height:1.35;cursor:pointer}.zone-chip.good{background:var(--green-soft);border:1px solid var(--green)}.zone-chip.bad{background:var(--red-soft);border:1px solid var(--red)}
+footer{text-align:center;color:var(--muted);font-size:12px;padding:26px 0 0}
+@media(max-width:980px){.split,.pair,.classify-layout{grid-template-columns:1fr}.left-sticky{position:static}.right-scroll{height:auto;min-height:0;overflow:visible;padding-right:0}.grid3,.drop-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:680px){main{padding:16px 14px 70px}.top-inner,.tabs{padding-left:14px;padding-right:14px}.grid2,.grid3,.drop-grid{grid-template-columns:1fr}.step-buttons{grid-template-columns:repeat(2,1fr)}.title h1{font-size:18px}.cloze-model select{width:100%;margin:4px 0}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="top-inner">
+    <div class="brand"><span class="badge">S6</span>Vineyard Academy</div>
+    <div class="title"><h1>雅思写作 S6</h1><p>小作文流程图 · 大作文 reason / solution</p></div>
+  </div>
+  <nav class="tabs">
+    <button class="active" data-tab="process">小作文流程图</button>
+    <button data-tab="language">Para 3 语言</button>
+    <button data-tab="model">范文与词汇</button>
+    <button data-tab="essay">大作文报告类</button>
+  </nav>
+</header>
+<main>
+<section class="view active" id="view-process">
+  <div class="split process-split">
+    <aside class="left-sticky">
+      <div class="panel">
+        <div class="panel-head"><b>C20T4 · Flow Chart</b><span class="muted">Bamboo fabric</span></div>
+        <div class="panel-body">
+          <div class="diagram"><img src="s6_bamboo_flow.png" alt="The diagram below shows how fabric is manufactured from bamboo"></div>
+          <div class="step-buttons">
+            <button class="step-btn" data-step="1">1 Plant</button><button class="step-btn" data-step="2">2 Harvest</button><button class="step-btn" data-step="3">3 Cut</button>
+            <button class="step-btn" data-step="4">4 Crush</button><button class="step-btn" data-step="5">5 Filter</button><button class="step-btn" data-step="6">6 Soften</button>
+            <button class="step-btn" data-step="7">7 Spin</button><button class="step-btn" data-step="8">8 Weave</button><button class="step-btn" data-step="9">9 Product</button>
+          </div>
+          <div class="step-info" id="stepInfo"><b>Step expressions</b><div class="eng">Choose a step below the image.</div></div>
+        </div>
+      </div>
+    </aside>
+    <div class="right-scroll">
+      <h2 class="section-title"><span>1</span>Para 1 句式（改写题目）</h2>
+      <div class="task">
+        <p>流程图的名字叫 <span class="eng">flow chart</span></p>
+        <div class="formula"><b>1. The diagram shows how sth [成品] is made/manufactured from 原材料</b><p>傻瓜式理解：</p><p class="eng">The diagram shows how 纸 is made from 木头.</p><p class="eng">The diagram shows how 勺子 is made from 钢铁.</p><p class="eng">例句：The diagram shows how fabric is manufactured from bamboo.</p></div>
+        <div class="formula"><b>2. The diagram shows/demonstrates the production of sth</b><p class="eng">The diagram shows the production of 纸.</p><p class="eng">The diagram shows the production of 勺子.</p><p class="eng">例句：The diagram demonstrates the production of bamboo fabric.</p></div>
+        <div class="formula"><b>3. The diagram shows sth making procedure</b><p class="eng">The diagram shows 纸 making procedure.</p><p class="eng">The diagram shows 勺子 making procedure.</p><p class="eng">例句：The flow chart illustrates the bamboo fabric making procedure.</p></div>
+        <div class="formula"><b>4. 补充有多少个步骤</b><p class="eng">The diagram shows the process by which sth is manufactured/produced can be outlined into 数字 consecutive steps.</p><p class="eng">e.g. The diagram shows the process by which bamboo fabric is produced can be outlined into nine consecutive steps.</p></div>
+      </div>
+      <h2 class="section-title"><span>2</span>Para 2 句式（概述）</h2>
+      <div class="task">
+        <div class="formula"><b>Pattern 1: paraphrasing + summary in a paragraph</b><p>在改写句用了包含多少个步骤的句式之后，直接跟这个模板句写内容。</p><p class="eng">The diagram illustrates how fabric is manufactured from bamboo, a process that can be outlined into nine consecutive steps, beginning with the growing of bamboo plants and ending with the weaving of the final product.</p></div>
+        <div class="formula"><b>Pattern 2: 开头小尾巴 + 后面几个步骤完整句子</b><p class="eng">There are X stages in the process / The process consists of X stages, beginning with A of B. Something is then 被动动作1, 被动动作2 and finally 被动动作3.</p><p>用并列被动句补充后面几个步骤。</p></div>
+        <div class="formula"><b>Pattern 3 先说总步骤 + 再小分组</b><p class="eng">The flow chart illustrates the X making procedure. Overall, the process involves X steps / The process consists of X stages, which can be grouped into X main steps: doing A, doing B and doing C.</p></div>
+        <div class="writer">
+          <div class="toolbar"><button data-command="bold">B</button><button data-command="underline">U</button><button data-command="hiliteColor" data-value="#fff2cc">黄</button><input type="color" data-color value="#315c66"></div>
+          <div class="editor" contenteditable="true" data-draft-html="overviewDraft" data-placeholder="Overall, the process consists of..."></div>
+          <div class="writer-foot"><span data-wordcount>0 words</span><span>Overview draft</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="view-language">
+  <div class="card">
+    <h2>Para 3 注意事项</h2>
+    <div class="grid3">
+      <div class="box"><h4>时态</h4><p>默认用一般现在时（流程是客观事实，无时间变化）。</p><p>若流程有“过去步骤”（如历史工艺），用一般过去时。</p></div>
+      <div class="box"><h4>语态</h4><p>以被动语态为主。</p><p>强调“事物被操作”，而非“谁操作”。</p><p class="eng">The raw material is transported to the factory.</p><p class="eng">Workers transport the raw material...</p><p>除非题目明确提及“人”。</p></div>
+      <div class="box"><h4>词汇替换</h4><p>避免重复使用词汇。</p></div>
+    </div>
+    <div class="definition">
+      <h3>被动语态定义</h3>
+      <p>被动语态表示主语是动作的承受者，而不是动作的发出者。流程图写作中，我们通常关注“材料/产品经历了什么步骤”，所以常用被动语态。</p>
+      <p class="eng"><b>基本结构：</b> subject + be + past participle</p>
+      <p class="eng"><b>流程图常用：</b> sugar cane is harvested / the juice is filtered / the liquid is heated</p>
+      <p>如果题目强调机器、工人或农民，也可以补充 <span class="eng">by + doer</span>，但不要每一句都写。</p>
+    </div>
+    <div class="quiz-list choice-group" data-quiz-group="passive">
+      <div class="quiz-card">
+        <h4>被动语态辨析 1</h4>
+        <p class="quiz-stem">先辨析基本形态：哪一个是被动语态的正确结构？</p>
+        <div class="options">
+          <button class="option">subject + verb + object</button>
+          <button class="option" data-correct="true">subject + be + past participle</button>
+          <button class="option">subject + be + verb-ing</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="quiz-card">
+        <h4>被动语态辨析 2</h4>
+        <p class="quiz-stem">判断句子是否为被动语态。</p>
+        <p class="eng one-line">The juice is filtered through a cloth.</p>
+        <div class="options">
+          <button class="option" data-correct="true">是被动语态</button>
+          <button class="option">不是被动语态</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="quiz-card">
+        <h4>被动语态辨析 3</h4>
+        <p class="quiz-stem">判断句子是否为被动语态。</p>
+        <p class="eng one-line">The machine mixes the powder with water.</p>
+        <div class="options">
+          <button class="option">是被动语态</button>
+          <button class="option" data-correct="true">不是被动语态</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="quiz-card">
+        <h4>被动语态辨析 4</h4>
+        <p class="quiz-stem">判断句子是否为被动语态。</p>
+        <p class="eng one-line">The bottles are washed before use.</p>
+        <div class="options">
+          <button class="option" data-correct="true">是被动语态</button>
+          <button class="option">不是被动语态</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="quiz-card">
+        <h4>被动语态辨析 5</h4>
+        <p class="quiz-stem">判断句子是否为被动语态。</p>
+        <p class="eng one-line">The water becomes steam after heating.</p>
+        <div class="options">
+          <button class="option">是被动语态</button>
+          <button class="option" data-correct="true">不是被动语态</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="check-row"><button class="btn btn-primary" data-check-choices="passive">检查</button><button class="btn btn-ghost" data-reset-choices="passive">重置</button><span class="feedback" data-choice-feedback="passive"></span></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>常用衔接词</h2>
+    <div class="grid2">
+      <div class="box"><h4>衔接词在前面</h4><p class="eng one-line">as soon as 前一个步骤, 后一个步骤</p><p class="eng one-line">As soon as the rice is washed, it is put into the cooker.</p><div class="translation-list" data-translation-group="links"><div class="translation-prompt"><p>中译英：</p><p>水一烧开，茶叶就被放进杯子里。</p><div class="translation-hint">核心提示：water / boil；tea leaves / put into / cup</div><textarea class="translation-input" data-answer="As soon as the water is boiled, the tea leaves are put into the cup."></textarea><div class="feedback"></div></div><div class="translation-prompt"><p>中译英：</p><p>鸡蛋一煮熟，就被放进冷水里。</p><div class="translation-hint">核心提示：eggs / boil；put into / cold water</div><textarea class="translation-input" data-answer="As soon as the eggs are boiled, they are put into cold water."></textarea><div class="feedback"></div></div></div><p class="eng one-line">after 前一个步骤, 后一个步骤</p><p class="eng one-line">After washing the rice, it is put into the cooker.</p><div class="translation-list" data-translation-group="links"><div class="translation-prompt"><p>中译英：</p><p>切好水果之后，它们被放进碗里。</p><div class="translation-hint">核心提示：after cutting fruit；put into / bowl</div><textarea class="translation-input" data-answer="After cutting the fruit, it is put into a bowl."></textarea><div class="feedback"></div></div><div class="translation-prompt"><p>中译英：</p><p>洗好瓶子之后，它们被装满果汁。</p><div class="translation-hint">核心提示：after washing bottles；fill with / juice</div><textarea class="translation-input" data-answer="After washing the bottles, they are filled with juice."></textarea><div class="feedback"></div></div></div><p class="eng one-line">once 前一个步骤, 后一个步骤</p><p class="eng one-line">Once the rice is washed, it is put into the cooker.</p><div class="translation-list" data-translation-group="links"><div class="translation-prompt"><p>中译英：</p><p>门一旦打开，箱子就被搬进去。</p><div class="translation-hint">核心提示：once / door / open；boxes / carry inside</div><textarea class="translation-input" data-answer="Once the door is opened, the boxes are carried inside."></textarea><div class="feedback"></div></div><div class="translation-prompt"><p>中译英：</p><p>面团一旦做好，就被切成小块。</p><div class="translation-hint">核心提示：once / dough / make；cut into / small pieces</div><textarea class="translation-input" data-answer="Once the dough is made, it is cut into small pieces."></textarea><div class="feedback"></div></div></div><p>前一个步骤都可以是 sth be done / doing sth / done sth。</p></div>
+      <div class="box"><h4>衔接词在后面</h4><p class="eng one-line">前一个步骤, after which 后一个步骤</p><p class="eng one-line">The rice is washed, after which it is put into the cooker.</p><div class="translation-list" data-translation-group="links"><div class="translation-prompt"><p>中译英：</p><p>牛奶被加热，随后它被倒进杯子里。</p><div class="translation-hint">核心提示：milk / heat；after which / pour into / cup</div><textarea class="translation-input" data-answer="The milk is heated, after which it is poured into a cup."></textarea><div class="feedback"></div></div><div class="translation-prompt"><p>中译英：</p><p>面包被切片，随后黄油被涂在上面。</p><div class="translation-hint">核心提示：bread / slice；after which / butter / spread on it</div><textarea class="translation-input" data-answer="The bread is sliced, after which butter is spread on it."></textarea><div class="feedback"></div></div></div><p class="eng one-line">前一个步骤, before 后一个步骤</p><p class="eng one-line">The rice is washed before it is put into the cooker.</p><div class="translation-list" data-translation-group="links"><div class="translation-prompt"><p>中译英：</p><p>玻璃杯先被清洗，然后才被装水。</p><div class="translation-hint">核心提示：glass / wash；before / fill with / water</div><textarea class="translation-input" data-answer="The glass is washed before it is filled with water."></textarea><div class="feedback"></div></div><div class="translation-prompt"><p>中译英：</p><p>蔬菜先被洗净，然后才被切碎。</p><div class="translation-hint">核心提示：vegetables / wash；before / chop</div><textarea class="translation-input" data-answer="The vegetables are washed before they are chopped."></textarea><div class="feedback"></div></div></div></div>
+      <div class="box"><h4>独立句子</h4><p class="eng">The next stage is to do sth.</p><p class="eng">Then comes the X procedure...</p></div>
+      <div class="box"><h4>副词/开头衔接词</h4><p class="eng">Next / Then</p><p class="eng">After that</p><p class="eng">Subsequently</p><p class="eng">This process is followed by doing</p><p class="eng">Finally</p></div>
+    </div>
+    <div class="check-row"><button class="btn btn-primary" data-check-translations="links">检查翻译</button><button class="btn btn-ghost" data-reset-translations="links">重置</button><span class="feedback" data-translation-feedback="links"></span></div>
+  </div>
+  <div class="card">
+    <h2>特殊句式（主要是增加细节）</h2>
+    <div class="grid2">
+      <div class="box"><h4>循环流程</h4><p class="eng">The process then loops back to the initial stage, forming a cycle.</p><p class="eng">The life cycle begins again.</p></div>
+      <div class="box"><h4>操作流程 + 补充操作细节</h4><p class="eng">Then comes the softening procedure, where water and amine oxide are blended with the fibres extracted in the previous stage, making the fibres easier to spin.</p></div>
+      <div class="box"><h4>设备 + where 定语从句</h4><p class="eng">Once / after the powder is mixed in a mixer, it is further transported to a rotating heater, where it is heated for some time.</p></div>
+      <div class="box"><h4>产物 + which</h4><p class="eng">In step four, the mixture is ground by a grinder and at the same time it is manufactured to cement, which also needs to be packed into bags in the final stage.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="view-model">
+  <div class="card">
+    <h2>常用动词</h2>
+    <div class="vocab-group">
+      <h3>混合/添加类（最容易混淆）</h3>
+      <table class="table">
+        <colgroup><col style="width:24%"><col style="width:46%"><col></colgroup>
+        <tr><th>词汇</th><th>适用场景</th><th>例子</th></tr>
+        <tr><td>be blended with</td><td>液体与液体、粉末与粉末的均匀混合</td><td>juice is blended with sugar syrup</td></tr>
+        <tr><td>be mixed with</td><td>最通用，固体、液体均可</td><td>cement is mixed with water</td></tr>
+        <tr><td>be combined with</td><td>强调两种成分结合产生新物质</td><td>chemicals are combined with water to form a solution</td></tr>
+        <tr><td>be infused with</td><td>气体/香味/物质渗透进入另一种物质，有"浸泡注入"的感觉</td><td>tea leaves are infused with boiling water / fabric is infused with dye</td></tr>
+        <tr><td>be incorporated into</td><td>某成分被整合进一个更大的系统或混合物，偏正式</td><td>additives are incorporated into the mixture</td></tr>
+        <tr><td>be dissolved in</td><td>固体溶解在液体中</td><td>salt is dissolved in water</td></tr>
+      </table>
+    </div>
+    <div class="vocab-group">
+      <h3>切割/分解类</h3>
+      <table class="table">
+        <colgroup><col style="width:28%"><col></colgroup>
+        <tr><th>词汇</th><th>适用场景</th></tr>
+        <tr><td>be sliced into</td><td>切成片状，刀类工具，食物常用</td></tr>
+        <tr><td>be divided into</td><td>抽象分组，或大块切成几个部分</td></tr>
+        <tr><td>be split into</td><td>沿自然纹理劈开，或分裂成两部分</td></tr>
+        <tr><td>be ground into</td><td>研磨成粉末，研磨机类</td></tr>
+        <tr><td>be pulverized into</td><td>比ground更强，碾碎成极细粉末</td></tr>
+        <tr><td>be broken down into</td><td>更抽象，化学分解或概念上的分解</td></tr>
+        <tr><td>be crushed into</td><td>压碎，强调外力挤压，不一定成粉</td></tr>
+      </table>
+    </div>
+    <div class="vocab-group">
+      <h3>过滤/分离类</h3>
+      <table class="table">
+        <colgroup><col style="width:28%"><col></colgroup>
+        <tr><th>词汇</th><th>适用场景</th></tr>
+        <tr><td>be filtered through</td><td>液体通过过滤介质（如limestone filter）</td></tr>
+        <tr><td>be strained through</td><td>更偏向厨房/食品场景，如过滤果汁</td></tr>
+        <tr><td>be separated by filtration</td><td>强调分离结果而非过程</td></tr>
+        <tr><td>be screened</td><td>工业筛选，如筛沙、筛矿石</td></tr>
+        <tr><td>be extracted from</td><td>从混合物中提取出目标成分</td></tr>
+      </table>
+    </div>
+    <div class="vocab-group">
+      <h3>加热/处理类</h3>
+      <table class="table">
+        <colgroup><col style="width:28%"><col></colgroup>
+        <tr><th>词汇</th><th>适用场景</th></tr>
+        <tr><td>be heated</td><td>最通用</td></tr>
+        <tr><td>be subjected to heat</td><td>强调被动承受高温，偏工业/正式</td></tr>
+        <tr><td>be exposed to high temperatures</td><td>强调暴露在高温环境中，持续性</td></tr>
+        <tr><td>be boiled</td><td>加热到沸腾</td></tr>
+        <tr><td>be evaporated</td><td>液体因热变为气体</td></tr>
+        <tr><td>be liquefied</td><td>固体因热变为液体</td></tr>
+      </table>
+    </div>
+    <div class="vocab-group">
+      <h3>变化/转化类</h3>
+      <table class="table">
+        <colgroup><col style="width:28%"><col></colgroup>
+        <tr><th>原词</th><th>同义替换</th></tr>
+        <tr><td>become</td><td>be transformed into / be converted into / develop into</td></tr>
+        <tr><td>change into</td><td>undergo a transformation into / evolve into</td></tr>
+        <tr><td>turn into</td><td>be processed into / be refined into</td></tr>
+      </table>
+    </div>
+    <div class="vocab-group">
+      <h3>运输/转移类</h3>
+      <table class="table">
+        <colgroup><col style="width:28%"><col></colgroup>
+        <tr><th>词汇</th><th>适用场景</th></tr>
+        <tr><td>be transported to</td><td>最通用，物理位移</td></tr>
+        <tr><td>be conveyed to</td><td>偏机械传送，如传送带</td></tr>
+        <tr><td>be transferred to</td><td>强调从一个容器/系统转移到另一个</td></tr>
+        <tr><td>be delivered to</td><td>强调送达目的地，有"终点"含义</td></tr>
+        <tr><td>be fed into</td><td>原料输入机器/设备，很形象</td></tr>
+      </table>
+    </div>
+    <div class="vocab-group">
+      <h3>自然过程类（循环图常用）</h3>
+      <table class="table">
+        <colgroup><col style="width:28%"><col></colgroup>
+        <tr><th>场景</th><th>词汇</th></tr>
+        <tr><td>水循环</td><td>evaporate → condense → precipitate → accumulate → flow</td></tr>
+        <tr><td>生物生长</td><td>hatch / emerge / develop / mature / reproduce / spawn</td></tr>
+        <tr><td>物质变化</td><td>dissolve / crystallize / solidify / decompose</td></tr>
+      </table>
+    </div>
+  </div>
+  <div class="split">
+    <aside class="left-sticky">
+      <div class="panel"><div class="panel-head"><b>Sugar Cane</b><span class="muted">范文图</span></div><div class="panel-body"><div class="diagram"><img src="s6_sugar_cane.png" alt="How sugar is produced from sugar cane"></div></div></div>
+    </aside>
+    <div>
+      <div class="task">
+        <h2>范文一挖空：糖的生产（Sugar Cane）</h2>
+        <p class="muted">在完整范文中选择合适表达。干扰项包含常用动词表里的错误搭配，以及结构相近但语法错误的表达。</p>
+        <div class="cloze-model" data-cloze-group="sugar">
+          <p>The diagram <select data-answer="illustrates"><option value="">选择</option><option>is illustrated</option><option>illustrates</option><option>is blended with</option><option>illustrating</option></select> how sugar <select data-answer="is manufactured"><option value="">选择</option><option>manufactured</option><option>is mixed with</option><option>is manufactured</option><option>are manufactured</option></select> from sugar cane, <select data-answer="a process that can be outlined into seven consecutive steps"><option value="">选择</option><option>a process can be outline into seven consecutive steps</option><option>be divided into several parts</option><option>a process that can be outlined into seven consecutive steps</option><option>a process that outlined into seven steps</option></select>, <select data-answer="beginning with"><option value="">选择</option><option>begins with</option><option>beginning with</option><option>be filtered through</option><option>begun with</option></select> the growing of sugar cane and <select data-answer="ending with"><option value="">选择</option><option>be delivered to</option><option>ended with</option><option>ending with</option><option>ends with</option></select> the drying and cooling of the final product.</p>
+          <p>Sugar cane <select data-answer="is first cultivated"><option value="">选择</option><option>first cultivated</option><option>is subjected to heat</option><option>is first cultivated</option><option>are first cultivated</option></select> <select data-answer="over a period of 12 to 18 months"><option value="">选择</option><option>be dissolved in water</option><option>over a period of 12 to 18 months</option><option>during a period is 12 to 18 months</option><option>over a period for 12 to 18 months</option></select> <select data-answer="before"><option value="">选择</option><option>after which</option><option>before</option><option>subsequently</option><option>finally</option></select> <select data-answer="being harvested"><option value="">选择</option><option>is harvested</option><option>being harvested</option><option>being boiling</option><option>be harvested</option></select>, <select data-answer="either mechanically by machine or manually by workers"><option value="">选择</option><option>through a limestone filter</option><option>either mechanically by machine or manually by workers</option><option>either mechanical by machine or manual by workers</option><option>either mechanically machine or manually workers</option></select>. The harvested cane <select data-answer="is then conveyed"><option value="">选择</option><option>then conveys</option><option>is mixed with</option><option>is then conveyed</option><option>are then conveyed</option></select> to a crushing facility, where it <select data-answer="is pulverized"><option value="">选择</option><option>is delivered</option><option>pulverized</option><option>is pulverized</option><option>is pulverize</option></select> to extract the juice. This juice <select data-answer="is subsequently"><option value="">选择</option><option>subsequently is</option><option>is divided into</option><option>is subsequently</option><option>subsequent</option></select> <select data-answer="strained"><option value="">选择</option><option>is strained</option><option>strained</option><option>screening</option><option>be strained</option></select> through a limestone filter to remove impurities and contaminants.</p>
+          <p>The purified liquid <select data-answer="is then fed"><option value="">选择</option><option>is sliced into</option><option>then fed</option><option>is then fed</option><option>are then fed</option></select> into an evaporator, where it <select data-answer="is subjected to heat"><option value="">选择</option><option>subjected to heat</option><option>is transported to</option><option>is subjected to heat</option><option>is subject to heat</option></select> <select data-answer="until"><option value="">选择</option><option>once</option><option>after which</option><option>until</option><option>beginning with</option></select> <select data-answer="transformed"><option value="">选择</option><option>is transformed</option><option>transformed</option><option>delivering</option><option>be transformed</option></select> into a thick syrup. <select data-answer="In the following stage"><option value="">选择</option><option>Be blended with</option><option>In the following stage</option><option>In following stage</option><option>Following stage in</option></select>, the syrup <select data-answer="is processed"><option value="">选择</option><option>processed</option><option>is dissolved</option><option>is processed</option><option>are processed</option></select> in a centrifuge, which <select data-answer="separates"><option value="">选择</option><option>is separated</option><option>is boiled</option><option>separates</option><option>separate</option></select> the sugar crystals from the remaining liquid. <select data-answer="Finally"><option value="">选择</option><option>Before</option><option>Finally</option><option>After which</option><option>Final</option></select>, the extracted crystals <select data-answer="undergo"><option value="">选择</option><option>are screened</option><option>undergoes</option><option>undergo</option><option>are undergo</option></select> a drying and cooling process, <select data-answer="yielding the refined sugar ready for consumption"><option value="">选择</option><option>being fed into an evaporator</option><option>yield the refined sugar ready for consumption</option><option>yielding the refined sugar ready for consumption</option><option>yielding the refined sugar is ready for consumption</option></select>.</p>
+          <div class="check-row"><button class="btn btn-primary" data-check-cloze="sugar">检查</button><button class="btn btn-ghost" data-reset-cloze="sugar">重置</button><span class="feedback" data-cloze-feedback="sugar"></span></div>
+        </div>
+      </div>
+      <div class="task locked-answer locked" id="sugarAnswerTask">
+        <h2>范文一：糖的生产（Sugar Cane）</h2>
+        <div class="lock-message">完成上方全文挖空并全部正确后，完整范文会在这里解锁。</div>
+        <div class="hl-controls"><span class="legend-link">连接词</span><span class="legend-passive">被动语态</span><span class="legend-verb">高级动词</span><span class="legend-detail">细节补充</span></div>
+        <div class="model" id="sugarModel">The diagram <mark class="hl-verb">illustrates</mark> how sugar <mark class="hl-passive">is manufactured</mark> from sugar cane, <mark class="hl-detail">a process that can be outlined into seven consecutive steps</mark>, <mark class="hl-link">beginning with</mark> the growing of sugar cane and <mark class="hl-link">ending with</mark> the drying and cooling of the final product.<br><br>Sugar cane <mark class="hl-passive">is first cultivated</mark> <mark class="hl-detail">over a period of 12 to 18 months</mark> <mark class="hl-link">before</mark> <mark class="hl-passive">being harvested</mark>, <mark class="hl-detail">either mechanically by machine or manually by workers</mark>. The harvested cane <mark class="hl-passive">is then conveyed</mark> to a crushing facility, where it <mark class="hl-passive">is pulverized</mark> to extract the juice. This juice <mark class="hl-link">is subsequently</mark> <mark class="hl-passive">strained</mark> through a limestone filter to remove impurities and contaminants.<br><br>The purified liquid <mark class="hl-passive">is then fed</mark> into an evaporator, where it <mark class="hl-passive">is subjected to heat</mark> <mark class="hl-link">until</mark> <mark class="hl-passive">transformed</mark> into a thick syrup. <mark class="hl-link">In the following stage</mark>, the syrup <mark class="hl-passive">is processed</mark> in a centrifuge, which <mark class="hl-verb">separates</mark> the sugar crystals from the remaining liquid. <mark class="hl-link">Finally</mark>, the extracted crystals <mark class="hl-verb">undergo</mark> a drying and cooling process, <mark class="hl-detail">yielding the refined sugar ready for consumption</mark>.</div>
+        <p class="muted">约152词</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="view" id="view-essay">
+  <div class="card">
+    <h2>大作文：报告类题型</h2>
+    <div class="grid2">
+      <div class="box"><h4>原因 + 措施</h4><p class="eng">In the present era, 【话题】 has become a matter of growing concern.</p><p class="eng">There is a noticeable phenomenon that 【题目现象改写】.</p><p class="eng">This essay will first analyze the underlying reasons behind this trend, before suggesting several feasible measures to tackle it.</p></div>
+      <div class="box"><h4>主体段</h4><p class="eng">Several potential causes can be identified.</p><p class="eng">First, 【原因1】 is widely regarded as a major / contributing factor. This is mainly because 【解释+延伸逻辑链】.</p><p class="eng">Another essential reason is 【原因2】, which has resulted in 【解释+延伸逻辑链】.</p><p class="eng">Ultimately, it requires the joint effort of individuals / communities, and the government to address this challenge effectively.</p><p class="eng">At the personal / community level, [specific action] is key, as it can...</p><p class="eng">Meanwhile, it is high time the authorities attempted to do sth.</p></div>
+      <div class="box"><h4>结尾段</h4><p class="eng">In conclusion, 【原因1】 and 【原因2】 are the main drivers of [the issue].</p><p class="eng">To resolve this problem successfully, the top priority is to 【措施1】, while at the same time motivating people to 【措施2】.</p></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>审题：名词复数 / 抽象名词</h2>
+    <div class="grid2">
+      <div class="box"><h4>复数名词</h4><p>出现复数名词 → 往往需要写不止一个点。</p><p>如果题目问 reasons / problems / solutions / advantages → 至少写两个方面。</p></div>
+      <div class="box"><h4>抽象名词具体化</h4><p>题目出现抽象名词 → 写作时需要具体化。</p><p class="eng">environmental issues → air pollution / water pollution / climate change / deforestation</p><p class="eng">modern technology → smartphones / artificial intelligence / online platforms</p><p class="eng">public services → public transport / hospitals / schools</p></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>真题示例 2026.Feb</h2>
+    <div class="grid2">
+      <div><p class="eng">In every country, there are driving laws to ensure road safety. Some people, however, still break these laws, such as by speeding or using mobile phones while driving.</p><p class="eng">What are the reasons for this?</p><p class="eng">What measures could help solve this problem?</p></div>
+      <div class="diagram"><img src="s6_road_safety_map.png" alt="违反道路安全法律原因和解决办法"></div>
+    </div>
+  </div>
+  <div class="task">
+    <h2>上下位词匹配练习</h2>
+    <p class="muted">拖拽分类，中英都保留。点击已放入的卡片可以移回。</p>
+    <div class="classify-layout">
+      <div>
+        <div class="drop-grid">
+          <div class="drop-zone" data-zone="driving_laws"><h4>1. 交通法规 / driving laws</h4></div>
+          <div class="drop-zone" data-zone="illegal_behaviour"><h4>2. 违法行为 / illegal driving behaviour</h4></div>
+          <div class="drop-zone" data-zone="reasons"><h4>3. 原因 / reasons</h4></div>
+          <div class="drop-zone" data-zone="consequences"><h4>4. 后果 / consequences</h4></div>
+          <div class="drop-zone" data-zone="measures"><h4>5. 措施 / measures</h4></div>
+        </div>
+        <div class="check-row"><button class="btn btn-primary" id="checkClassify">检查</button><button class="btn btn-ghost" id="clearClassify">清空</button><span class="feedback" id="classifyFeedback"></span></div>
+      </div>
+      <div class="chip-pool" id="chipPool"></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>从词汇到观点</h2>
+    <p class="muted">6分标准的观点不需要很复杂，但必须直接回答题目，并且能继续解释。</p>
+    <div class="grid3">
+      <div class="box"><h4>1. 先选词</h4><p class="eng">low chance of being caught</p><p>被抓概率低</p></div>
+      <div class="box"><h4>2. 变成观点</h4><p class="eng">Many drivers break traffic laws because they believe the chance of being caught is low.</p></div>
+      <div class="box"><h4>3. 继续解释</h4><p class="eng">When police officers and cameras are rarely seen, drivers may think that speeding or phone use will not lead to punishment.</p></div>
+    </div>
+  </div>
+  <div class="task">
+    <h2>观点筛选练习</h2>
+    <p class="muted">每题选一个更适合写进6分主体段的观点。干扰项不是完全错误，而是贴题度、解释空间或逻辑连接稍弱。</p>
+    <div class="quiz-list choice-group" data-quiz-group="essay-opinions">
+      <div class="quiz-card">
+        <h4>1. 选择更适合解释“原因”的观点</h4>
+        <p class="quiz-stem">题目：为什么有些司机仍然违反交通法规？</p>
+        <div class="options">
+          <button class="option">Many drivers know that road safety is important, but they still need to arrive at work on time.</button>
+          <button class="option" data-correct="true">Some drivers break the rules because they believe the chance of being punished is low.</button>
+          <button class="option">Traffic laws are useful because they can protect both drivers and pedestrians.</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="quiz-card">
+        <h4>2. 选择更适合解释“原因”的观点</h4>
+        <p class="quiz-stem">题目：为什么司机会开车时使用手机？</p>
+        <div class="options">
+          <button class="option">Mobile phones are now widely used in almost every part of daily life.</button>
+          <button class="option">Some drivers use phones because modern cars are more comfortable than before.</button>
+          <button class="option" data-correct="true">Some drivers use phones while driving because they feel pressure to reply to messages immediately.</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="quiz-card">
+        <h4>3. 选择更适合写“措施”的观点</h4>
+        <p class="quiz-stem">题目：什么措施可以减少违法驾驶？</p>
+        <div class="options">
+          <button class="option" data-correct="true">The government could install more cameras and increase fines so that drivers are more afraid of being punished.</button>
+          <button class="option">The government could build wider roads because drivers usually prefer roads that are easier to use.</button>
+          <button class="option">Schools could teach young people more about cars before they become adults.</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="quiz-card">
+        <h4>4. 选择更适合连接“原因 + 后果”的观点</h4>
+        <p class="quiz-stem">题目：为什么超速会成为问题？</p>
+        <div class="options">
+          <button class="option">Speeding is common in many cities, especially when roads are not very busy.</button>
+          <button class="option" data-correct="true">When drivers underestimate the danger of speeding, they may react too slowly and cause serious accidents.</button>
+          <button class="option">Some drivers enjoy driving fast because it makes the journey feel shorter.</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="check-row"><button class="btn btn-primary" data-check-choices="essay-opinions">检查</button><button class="btn btn-ghost" data-reset-choices="essay-opinions">重置</button><span class="feedback" data-choice-feedback="essay-opinions"></span></div>
+    </div>
+  </div>
+  <div class="task">
+    <h2>观点生成选择</h2>
+    <p class="muted">根据核心词，选出更适合写进6分主体段的观点句。</p>
+    <div class="quiz-list choice-group" data-quiz-group="essay-generate">
+      <div class="quiz-card">
+        <h4>1. 原因观点</h4>
+        <p class="quiz-stem">核心词：weak enforcement / low chance of being caught</p>
+        <div class="options">
+          <button class="option">Weak enforcement is a common issue in many cities, and drivers sometimes see it on the road.</button>
+          <button class="option" data-correct="true">Weak enforcement encourages some drivers to break traffic laws because they believe they are unlikely to be caught.</button>
+          <button class="option">Weak enforcement means that road safety is important for both drivers and passengers.</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="quiz-card">
+        <h4>2. 原因观点</h4>
+        <p class="quiz-stem">核心词：pressure to reply / mobile phones</p>
+        <div class="options">
+          <button class="option" data-correct="true">Some drivers use mobile phones while driving because they feel pressure to reply to work messages immediately.</button>
+          <button class="option">Mobile phones are useful because people can use them to contact family members at any time.</button>
+          <button class="option">Some drivers use phones while driving, so mobile phones have become a common part of modern life.</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="quiz-card">
+        <h4>3. 措施观点</h4>
+        <p class="quiz-stem">核心词：stricter penalties / heavy fines</p>
+        <div class="options">
+          <button class="option">Stricter penalties are useful because many countries already have different traffic laws.</button>
+          <button class="option">Heavy fines are sometimes unpopular, especially among drivers who travel every day.</button>
+          <button class="option" data-correct="true">Stricter penalties such as heavy fines could make drivers think twice before speeding or using phones on the road.</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="quiz-card">
+        <h4>4. 措施观点</h4>
+        <p class="quiz-stem">核心词：public education / real consequences</p>
+        <div class="options">
+          <button class="option">Public education is a good idea because students usually learn many subjects at school.</button>
+          <button class="option" data-correct="true">Public education can reduce dangerous driving by showing people the real consequences of road accidents.</button>
+          <button class="option">Public education about road safety is often seen on television and social media.</button>
+        </div>
+        <div class="feedback"></div>
+      </div>
+      <div class="check-row"><button class="btn btn-primary" data-check-choices="essay-generate">检查</button><button class="btn btn-ghost" data-reset-choices="essay-generate">重置</button><span class="feedback" data-choice-feedback="essay-generate"></span></div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>Causes / Solutions 逻辑链</h2>
+    <div class="grid2">
+      <div class="box"><h4>Cause 1 — Mental Health / Perception</h4><p>情境：司机在路上很少看到警察或摄像头</p><p>→ 直接效果：他们认为被抓的可能性很小</p><p>→ 对人的影响：觉得接电话或超速带来的方便比可能被罚更重要</p><p>→ 长期后果：越来越多的人不把交通规则当回事</p></div>
+      <div class="box"><h4>Cause 2 — Personal Growth / Overconfidence</h4><p>情境：司机过去超速或看手机时从未出事</p><p>→ 直接效果：他们觉得自己技术好，别人出事是因为别人笨</p><p>→ 对人的影响：对交通规则变得轻视和不在意</p><p>→ 长期后果：继续保持危险习惯，最终可能导致严重事故</p></div>
+      <div class="box"><h4>Cause 3 — Efficiency & Productivity / Modern Life Pressure</h4><p>情境：工作中要随时回消息、准时送到货或赶到会场</p><p>→ 直接效果：司机觉得交通规则耽误时间，挡了自己的路</p><p>→ 对人的影响：把安全和规则放在第二位，把效率放在第一位</p><p>→ 长期后果：危险驾驶变成普遍现象，大家习以为常</p></div>
+      <div class="box"><h4>Solutions</h4><p><b>Solution 1 — Enforcement</b></p><p>情境：路上增加警察巡逻和自动摄像头，罚款金额提高 → 违规减少，道路变得更安全</p><p><b>Solution 2 — Awareness</b></p><p>情境：驾校课程中加入真实事故视频，媒体播放安全宣传 → 安全驾驶成为社会习惯</p></div>
+    </div>
+  </div>
+  <div class="task">
+    <h2>Road Safety 范文挖空</h2>
+    <p class="muted">根据中文提示，选择合适的词汇或短句，补全整篇范文。</p>
+    <div class="cloze-model" data-cloze-group="road">
+      <p><span class="cloze-hint">当今时代</span><select data-answer="In the present era"><option value="">选择</option><option>At the present era</option><option>In the present era</option><option>On the modern age</option><option>In nowadays society</option></select>, road safety has become <span class="cloze-hint">日益担忧的问题</span><select data-answer="a matter of growing concern"><option value="">选择</option><option>a problem is growing concern</option><option>a matter of growing concern</option><option>a growing concerned matter</option><option>a matter with many concerns</option></select>. There is <span class="cloze-hint">一个显著现象</span><select data-answer="a noticeable phenomenon"><option value="">选择</option><option>a noticed phenomenon</option><option>a noticeable phenomenon</option><option>a phenomenon is noticeable</option><option>a noticeable problem</option></select> that many motorists continue to <span class="cloze-hint">违反交通法规</span><select data-answer="break traffic laws"><option value="">选择</option><option>damage traffic laws</option><option>break traffic rules about safety</option><option>against traffic laws</option><option>break traffic laws</option></select> by speeding or using mobile phones while driving, <span class="cloze-hint">尽管有规定</span><select data-answer="despite regulations in every country"><option value="">选择</option><option>although regulations in every country</option><option>despite regulations in every country</option><option>despite of regulations in every country</option><option>with regulations are in every country</option></select>. This essay will <span class="cloze-hint">分析原因</span><select data-answer="analyze the reasons behind this trend"><option value="">选择</option><option>analyze reasons behind trend</option><option>analysis the reasons of this trend</option><option>discuss why this trend is good</option><option>analyze the reasons behind this trend</option></select> before suggesting <span class="cloze-hint">可行措施</span><select data-answer="feasible measures to tackle it"><option value="">选择</option><option>feasible measures tackling it</option><option>useful things to make it better</option><option>measures are feasible to tackle</option><option>feasible measures to tackle it</option></select>.</p>
+      <p><span class="cloze-hint">几个可能原因</span><select data-answer="Several potential causes can be identified"><option value="">选择</option><option>Several causes can identify</option><option>There has several potential causes</option><option>Several potential causes are identifying</option><option>Several potential causes can be identified</option></select>. First, <span class="cloze-hint">错误认知</span><select data-answer="a false belief"><option value="">选择</option><option>a false believe</option><option>a wrong believing</option><option>the false thinking</option><option>a false belief</option></select> that the chance of being punished is low is <span class="cloze-hint">主要因素</span><select data-answer="widely regarded as a major factor"><option value="">选择</option><option>widely regarded to a major factor</option><option>widely considered a factor major</option><option>regarded widely as major reason</option><option>widely regarded as a major factor</option></select>, since when drivers rarely see police or cameras, they judge the convenience of speeding or phone use to <span class="cloze-hint">超过风险</span><select data-answer="outweigh the slight risk of being caught"><option value="">选择</option><option>overweight the risk of caught</option><option>outweigh to be caught risk</option><option>is more than the risk catch</option><option>outweigh the slight risk of being caught</option></select>. For example, drivers in many busy cities regularly use phones at red lights since <span class="cloze-hint">巡逻不常见</span><select data-answer="patrols are uncommon"><option value="">选择</option><option>patrols are not commonly</option><option>the patrol is uncommon</option><option>patrols uncommon are</option><option>patrols are uncommon</option></select>. Another essential reason is <span class="cloze-hint">过度自信态度</span><select data-answer="an overconfident attitude"><option value="">选择</option><option>a overconfident attitude</option><option>an attitude overconfident</option><option>an overconfidence attitude</option><option>an overconfident attitude</option></select> that ignores real dangers: having broken rules before without crashing, many drivers convince themselves they are <span class="cloze-hint">技术足够好</span><select data-answer="skilled enough to handle any situation safely"><option value="">选择</option><option>enough skilled to handle any situation safe</option><option>skilled enough handling any situations safely</option><option>able enough for handle any situation</option><option>skilled enough to handle any situation safely</option></select>.</p>
+      <p>Ultimately, it requires <span class="cloze-hint">共同努力</span><select data-answer="the joint effort of communities and the government"><option value="">选择</option><option>the joined effort from community and government</option><option>communities and government effort together</option><option>the joint efforts is from communities</option><option>the joint effort of communities and the government</option></select> to address this challenge effectively. At the community level, <span class="cloze-hint">通过教育提高意识</span><select data-answer="raising awareness through education"><option value="">选择</option><option>raise awareness through education</option><option>raising aware through education</option><option>awareness raising by educate</option><option>raising awareness through education</option></select> is key, as it can <span class="cloze-hint">消除虚假自信</span><select data-answer="dispel drivers' false confidence"><option value="">选择</option><option>cancel drivers false confident</option><option>dispel drivers' false confident</option><option>make drivers' confidence disappear wrongly</option><option>dispel drivers' false confidence</option></select> by showing them the real consequences of dangerous driving, as UK courses do with crash-survivor videos. Meanwhile, it is high time the authorities attempted to <span class="cloze-hint">加强执法</span><select data-answer="strengthen enforcement"><option value="">选择</option><option>strong enforcement</option><option>strengthen the enforce</option><option>make enforcement strongly</option><option>strengthen enforcement</option></select> through frequent patrols, automated cameras, and <span class="cloze-hint">更严厉处罚</span><select data-answer="harsher penalties"><option value="">选择</option><option>hardly penalties</option><option>more harsh penalty</option><option>penalties are harsher</option><option>harsher penalties</option></select> such as heavy fines or licence suspensions, as seen in Australia, where tough fines for phone use have <span class="cloze-hint">显著减少违规</span><select data-answer="significantly cut violations"><option value="">选择</option><option>significant cut violations</option><option>cut violations significant</option><option>strongly cut the violate</option><option>significantly cut violations</option></select>.</p>
+      <p>In conclusion, <span class="cloze-hint">虚假的安全感</span><select data-answer="a false sense of security"><option value="">选择</option><option>a false feeling of safety sense</option><option>a security false sense</option><option>a wrongly sense of secure</option><option>a false sense of security</option></select> and overconfidence are <span class="cloze-hint">主要原因</span><select data-answer="the main drivers of this problem"><option value="">选择</option><option>the main drives of this problem</option><option>main drivers to this problem</option><option>the main reasons drive problem</option><option>the main drivers of this problem</option></select>. To resolve it successfully, the top priority is to <span class="cloze-hint">实施严格持续执法</span><select data-answer="implement strict and consistent enforcement"><option value="">选择</option><option>implement strict and consistently enforcement</option><option>make strict and consistent enforce</option><option>implement enforcement strict and consistent</option><option>implement strict and consistent enforcement</option></select>, while at the same time motivating people to <span class="cloze-hint">形成真正意识</span><select data-answer="develop genuine awareness of road safety"><option value="">选择</option><option>develop genuinely awareness of road safety</option><option>make genuine aware of road safety</option><option>develop road safety genuine awareness</option><option>develop genuine awareness of road safety</option></select>.</p>
+      <div class="check-row"><button class="btn btn-primary" data-check-cloze="road">检查</button><button class="btn btn-ghost" data-reset-cloze="road">重置</button><span class="feedback" data-cloze-feedback="road"></span></div>
+    </div>
+    <p class="muted">约285词</p>
+  </div>
+</section>
+<footer>Vineyard Academy · 闻雅德国际教育 · IELTS Writing S6</footer>
+</main>
+<script>
+const steps={1:["Plant bamboo plants","Bamboo plants are planted in spring."],2:["Harvest","The bamboo is harvested in autumn."],3:["Cut into strips","The harvested bamboo is cut into strips."],4:["Crush strips","The strips are crushed to make liquid pulp."],5:["Filter","The liquid pulp is filtered to separate long fibres from liquid."],6:["Soften fibres","The fibres are softened by adding water and amine oxide."],7:["Spin","The softened fibres are spun to make yarn."],8:["Weave","The yarn is woven to make fabric."],9:["Final products","The fabric is made into clothing items such as socks and T-shirts."]};
+function syncProcessHeight(){const panel=document.querySelector("#view-process .left-sticky .panel");const right=document.querySelector("#view-process .right-scroll");if(!panel||!right)return;if(window.matchMedia("(max-width: 980px)").matches){right.style.height="";return;}right.style.height=panel.offsetHeight+"px";}
+window.addEventListener("load",syncProcessHeight);window.addEventListener("resize",syncProcessHeight);document.querySelectorAll("#view-process img").forEach(img=>img.addEventListener("load",syncProcessHeight));
+document.querySelectorAll(".tabs button").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".tabs button").forEach(b=>b.classList.toggle("active",b===btn));document.querySelectorAll(".view").forEach(v=>v.classList.toggle("active",v.id==="view-"+btn.dataset.tab));syncProcessHeight();window.scrollTo({top:0,behavior:"smooth"});}));
+document.querySelectorAll(".step-btn").forEach(btn=>btn.addEventListener("click",()=>{document.querySelectorAll(".step-btn").forEach(b=>b.classList.remove("active"));btn.classList.add("active");const s=steps[btn.dataset.step];document.getElementById("stepInfo").innerHTML="<b>"+btn.dataset.step+". "+s[0]+"</b><div class='eng'>"+s[1]+"</div>";}));
+function wordCount(html){const m=String(html||"").replace(/<[^>]*>/g," ").match(/[A-Za-z0-9'-]+/g);return m?m.length:0}
+document.querySelectorAll(".writer").forEach(w=>{const ed=w.querySelector(".editor");function save(){w.querySelector("[data-wordcount]").textContent=wordCount(ed.innerHTML)+" words"}w.querySelectorAll("[data-command]").forEach(b=>b.addEventListener("click",()=>{ed.focus();document.execCommand(b.dataset.command,false,b.dataset.value||null);save();}));const c=w.querySelector("[data-color]");if(c)c.addEventListener("input",()=>{ed.focus();document.execCommand("foreColor",false,c.value);save();});ed.addEventListener("input",save);});
+document.querySelectorAll(".choice-group .option").forEach(btn=>btn.addEventListener("click",()=>{const card=btn.closest(".quiz-card");const selected=btn.classList.contains("selected");card.querySelectorAll(".option").forEach(o=>o.classList.remove("selected","correct","wrong"));if(!selected)btn.classList.add("selected");const fb=card.querySelector(".feedback");if(fb){fb.textContent="";fb.className="feedback";}const group=btn.closest(".choice-group");const groupFb=group&&group.querySelector("[data-choice-feedback]");if(groupFb){groupFb.textContent="";groupFb.className="feedback";}}));
+document.querySelectorAll("[data-check-choices]").forEach(btn=>btn.addEventListener("click",()=>{const group=document.querySelector('[data-quiz-group="'+btn.dataset.checkChoices+'"]');if(!group)return;let total=0,ok=0,answered=0;group.querySelectorAll(".quiz-card").forEach(card=>{total++;const selected=card.querySelector(".option.selected");const correct=card.querySelector(".option[data-correct='true']");card.querySelectorAll(".option").forEach(o=>o.classList.remove("correct","wrong"));if(selected){answered++;const good=selected===correct;selected.classList.add(good?"correct":"wrong");if(good)ok++;}if(correct)correct.classList.add("correct");const fb=card.querySelector(".feedback");if(fb){fb.textContent=selected?(selected===correct?"正确。":"答案已标出。"):"未选择。";fb.className="feedback "+(selected===correct?"good":"bad");}});const groupFb=group.querySelector("[data-choice-feedback]");if(groupFb){groupFb.textContent=ok+" / "+total+" 正确，已完成 "+answered+" 题";groupFb.className="feedback "+(ok===total?"good":"bad");}}));
+document.querySelectorAll("[data-reset-choices]").forEach(btn=>btn.addEventListener("click",()=>{const group=document.querySelector('[data-quiz-group="'+btn.dataset.resetChoices+'"]');if(!group)return;group.querySelectorAll(".option").forEach(o=>o.classList.remove("selected","correct","wrong"));group.querySelectorAll(".feedback").forEach(fb=>{fb.textContent="";fb.className="feedback";});}));
+function normalizeAnswer(text){return String(text||"").toLowerCase().replace(/[.,;:!?]/g,"").replace(/\s+/g," ").trim();}
+document.querySelectorAll("[data-check-translations]").forEach(btn=>btn.addEventListener("click",()=>{const groupName=btn.dataset.checkTranslations;const inputs=document.querySelectorAll('[data-translation-group="'+groupName+'"] .translation-input');let total=0,ok=0,answered=0;inputs.forEach(input=>{total++;input.classList.remove("correct","wrong");const student=normalizeAnswer(input.value);const answer=normalizeAnswer(input.dataset.answer);const good=student&&student===answer;if(student)answered++;input.classList.add(good?"correct":"wrong");const fb=input.closest(".translation-prompt").querySelector(".feedback");if(fb){fb.textContent=good?"正确。":(student?"参考答案："+input.dataset.answer:"先写一句英文。");fb.className="feedback "+(good?"good":"bad");}if(good)ok++;});const groupFb=document.querySelector('[data-translation-feedback="'+groupName+'"]');if(groupFb){groupFb.textContent=ok+" / "+total+" 正确，已完成 "+answered+" 题";groupFb.className="feedback "+(ok===total?"good":"bad");}}));
+document.querySelectorAll("[data-reset-translations]").forEach(btn=>btn.addEventListener("click",()=>{const groupName=btn.dataset.resetTranslations;document.querySelectorAll('[data-translation-group="'+groupName+'"] .translation-input').forEach(input=>{input.value="";input.classList.remove("correct","wrong");});document.querySelectorAll('[data-translation-group="'+groupName+'"] .feedback').forEach(fb=>{fb.textContent="";fb.className="feedback";});const groupFb=document.querySelector('[data-translation-feedback="'+groupName+'"]');if(groupFb){groupFb.textContent="";groupFb.className="feedback";}}));
+document.querySelectorAll("[data-check-cloze]").forEach(btn=>btn.addEventListener("click",()=>{const groupName=btn.dataset.checkCloze;const group=document.querySelector('[data-cloze-group="'+groupName+'"]');if(!group)return;let total=0,ok=0;group.querySelectorAll("select[data-answer]").forEach(sel=>{total++;sel.classList.remove("correct","wrong");const good=sel.value===sel.dataset.answer;sel.classList.add(good?"correct":"wrong");if(good)ok++;});const fb=group.querySelector("[data-cloze-feedback]");const allCorrect=ok===total;if(fb){if(groupName==="sugar"){fb.textContent=allCorrect?ok+" / "+total+" 正确，完整范文已解锁。":ok+" / "+total+" 正确，全部正确后解锁范文。";}else{fb.textContent=ok+" / "+total+" 正确";}fb.className="feedback "+(allCorrect?"good":"bad");}const answerTask=document.getElementById("sugarAnswerTask");if(groupName==="sugar"&&answerTask)answerTask.classList.toggle("locked",!allCorrect);}));
+document.querySelectorAll("[data-reset-cloze]").forEach(btn=>btn.addEventListener("click",()=>{const groupName=btn.dataset.resetCloze;const group=document.querySelector('[data-cloze-group="'+groupName+'"]');if(!group)return;group.querySelectorAll("select[data-answer]").forEach(sel=>{sel.value="";sel.classList.remove("correct","wrong");});const fb=group.querySelector("[data-cloze-feedback]");if(fb){fb.textContent="";fb.className="feedback";}const answerTask=document.getElementById("sugarAnswerTask");if(groupName==="sugar"&&answerTask)answerTask.classList.add("locked");}));
+const classifyItems=[
+["driving_laws","speed limits 限速规定"],["driving_laws","drink-driving laws 酒驾法规"],["driving_laws","seat-belt rules 安全带规定"],["driving_laws","mobile-phone bans 禁止开车用手机"],["driving_laws","parking restrictions 停车限制"],["driving_laws","obey traffic lights 遵守红绿灯"],["driving_laws","give way to pedestrians 礼让行人"],["driving_laws","keep a safe distance 保持安全车距"],["driving_laws","hold a valid driving licence 持有效驾照"],
+["illegal_behaviour","speeding 超速"],["illegal_behaviour","running red lights 闯红灯"],["illegal_behaviour","illegal parking 违章停车"],["illegal_behaviour","reckless driving 鲁莽驾驶"],["illegal_behaviour","using mobile phones while driving 开车用手机"],["illegal_behaviour","texting behind the wheel 边开车边发短信"],["illegal_behaviour","tailgating 贴车太近"],["illegal_behaviour","driving under the influence 酒驾/毒驾"],
+["reasons","weak awareness 安全意识薄弱"],["reasons","underestimate the risks 低估风险"],["reasons","convenience and impatience 图方便/没耐心"],["reasons","addiction to phones 手机依赖"],["reasons","weak enforcement 执法不足"],["reasons","low chance of being caught 被抓概率低"],["reasons","social habits 社会习惯"],
+["consequences","road accidents 交通事故"],["consequences","fatal crashes 致命车祸"],["consequences","public safety risks 公共安全风险"],["consequences","reduce reaction time 降低反应时间"],["consequences","social costs 社会成本"],["consequences","medical costs 医疗费用"],
+["measures","stricter penalties 更严惩罚"],["measures","heavier fines 更高罚款"],["measures","stronger enforcement 加强执法"],["measures","install speed cameras 安装测速摄像头"],["measures","public education 公共教育"],["measures","road safety campaigns 交通安全宣传"],["measures","technology-based solutions 技术手段"],["measures","better road design 道路设计"]];
+const pool=document.getElementById("chipPool");let dragged=null;function renderChips(){pool.innerHTML="";classifyItems.sort(()=>Math.random()-.5).forEach(([zone,text],i)=>{const c=document.createElement("div");c.className="chip";c.draggable=true;c.dataset.zone=zone;c.dataset.id="c"+i;c.textContent=text;c.addEventListener("dragstart",()=>dragged=c);pool.appendChild(c);});}
+renderChips();document.querySelectorAll(".drop-zone").forEach(z=>{z.addEventListener("dragover",e=>e.preventDefault());z.addEventListener("drop",e=>{e.preventDefault();if(!dragged)return;const chip=document.createElement("div");chip.className="zone-chip";chip.dataset.zone=dragged.dataset.zone;chip.textContent=dragged.textContent;chip.addEventListener("click",()=>{chip.remove();dragged.classList.remove("placed")});z.appendChild(chip);dragged.classList.add("placed");});});
+document.getElementById("checkClassify").addEventListener("click",()=>{let total=0,ok=0;document.querySelectorAll(".zone-chip").forEach(c=>{total++;const good=c.dataset.zone===c.closest(".drop-zone").dataset.zone;c.classList.toggle("good",good);c.classList.toggle("bad",!good);if(good)ok++;});const fb=document.getElementById("classifyFeedback");if(!total){fb.textContent="先拖拽卡片，再检查。";fb.className="feedback bad";return;}fb.textContent=ok+" / "+total+" 分类正确";fb.className="feedback "+(ok===total?"good":"bad");});
+document.getElementById("clearClassify").addEventListener("click",()=>{document.querySelectorAll(".zone-chip").forEach(c=>c.remove());document.querySelectorAll(".chip").forEach(c=>c.classList.remove("placed"));document.getElementById("classifyFeedback").textContent="";});
+</script>
+</body>
+</html>
